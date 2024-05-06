@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.post-nav{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.green-button {
+    width: 100px;
+    height: 50px;
+    background-color: #059377;
+    color: white;
+    border-color: white;
+    border-radius: 8px;
+    box-shadow: none;
+    font-size: 1em;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+
+}
+.post-nav > .green-button {
+    margin-right: 60px;
+}
+.post-background{
+    flex-grow: 2;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                       rgba(0, 0, 0, 0.5)), url(/assets/login\ banner.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
