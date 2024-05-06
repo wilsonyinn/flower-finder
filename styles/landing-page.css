@@ -1,0 +1,131 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.landing-banner {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                       rgba(0, 0, 0, 0.5)), url(/assets/banner.jpg);
+    background-size: 1950px;
+    min-height: 400px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.left-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-grow: 1;
+}
+.left-nav > h1 {
+    margin-left: 2em;
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.right-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 50px;
+    font-size: 1em;
+}
+
+.right-nav > h2 {
+    color: white;
+    font-weight: 400;
+}
+
+.right-nav > .login {
+    margin-right: 2em;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 30%;
+    align-self: center;
+}
+
+.banner-text > p {
+    margin-top: 50px;
+    color: white;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.input-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+}
+
+.input-search > input{
+    width: 30%;
+    height: 4em;
+    font-size: 1em;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 8px;
+}
+
+.input-search > button {
+    background-image: url(/assets/search-icon.webp);
+    background-size: 59px;
+    width: 5em;
+}
+
+.title-filter-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    align-self: center;
+    margin: 10px 0px;
+}
+
+.photo-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 95%;
+    gap: 10px 10px;
+    flex-wrap: wrap;
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+.photo-grid > img {
+    flex-grow: 1;
+    height: 300px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}

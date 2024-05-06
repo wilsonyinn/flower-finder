@@ -4,31 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/landing-page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Open+Sans&family=Piedra&display=swap"
+      rel="stylesheet"
+    />
     <title>Flower Finder</title>
   </head>
   <body>
-    <img src="./assets/banner.jpg" alt="" />
-    <h1>Flower Finder</h1>
-    <h2>Upload</h2>
-    <h2>FAQ</h2>
-    <h2>Log in</h2>
-    <div>
-      <img src="./assets/google logo.png" alt="" />
-      <img src="./assets/facebook logo.png" alt="" />
-      <img src="./assets/apple logo.png" alt="" />
+    <!-- landing banner -->
+    <div class="landing-banner">
+      <!-- nav bar -->
+      <div class="nav-bar">
+        <!-- left nav bar -->
+        <div class="left-nav">
+          <h1>Flower Finder</h1>
+        </div>
+
+        <!-- right nav bar -->
+        <div class="right-nav">
+          <h2>Upload</h2>
+          <h2>FAQ</h2>
+          <h2 class="login">Log in</h2>
+        </div>
+      </div>
+
+      <!-- paragraph text -->
+      <div class="banner-text">
+        <p>The best free, open-source flower photos</p>
+      </div>
+
+      <!-- input and search -->
+      <div class="input-search">
+        <input type="text" value="Search flower photos" />
+        <button></button>
+      </div>
     </div>
 
-    <p>The best free, open-source flower photos</p>
-    <input type="text" value="Search flower photos" />
-    <button>Search</button>
-    <h3>Free Flower Images</h3>
-    <select name="filter" id="filter">
-      <option value="By Date">By Date</option>
-      <option value="Trending">Trending</option>
-    </select>
+    <!-- title and filter -->
+    <div class="title-filter-row">
+      <h3>Free Flower Images</h3>
+      <select name="filter" id="filter">
+        <option value="By Date">By Date</option>
+        <option value="Trending">Trending</option>
+      </select>
+    </div>
 
-    <div>
+    <!-- photo grid -->
+    <div class="photo-grid">
       <img src="./assets/flower-photo-1.jpg" alt="" />
       <img src="./assets/flower-photo-2.jpg" alt="" />
       <img src="./assets/flower-photo-3.jpg" alt="" />
@@ -38,6 +63,11 @@
       <img src="./assets/flower-photo-7.jpg" alt="" />
       <img src="./assets/flower-photo-8.jpg" alt="" />
       <img src="./assets/flower-photo-9.jpg" alt="" />
+    </div>
+    <!-- footer -->
+    <div class="footer">
+      <p>Flower Finder &copy 2024</p>
+      <p>Contact Developer Wilson Yin</p>
     </div>
   </body>
 </html>
