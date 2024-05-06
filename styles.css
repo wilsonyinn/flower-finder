@@ -113,6 +113,13 @@ body{
     border-color: #DFDFE0;
     border-style: solid;
 }
+
+.white-box-title > .half-input {
+    width: 95%;
+    margin: 0px;
+    padding: 0px;
+}
+
 .white-box > button{
     width: 80%;
     margin-bottom: .5em;
@@ -122,9 +129,5 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.row-obj{
-    display: flex;
-    flex-direction: column;
+    width: 85%;
 }
