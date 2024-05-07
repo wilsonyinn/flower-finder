@@ -45,3 +45,14 @@ body{
     align-items: center;
     height: 80%;
 }
+
+.white-box{
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+    justify-content: space-evenly;
+}
