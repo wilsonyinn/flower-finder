@@ -1,0 +1,87 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.nav-bar{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.background {
+    flex-grow: 2;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                       rgba(0, 0, 0, 0.5)), url(/assets/login\ banner.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.white-box {
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 90%;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-top: 1em;
+    margin-bottom: .25em;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+    font-size: 2em;
+}
+
+.grey-box {
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    justify-content: center;
+}
+
+.grey-box > img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.exit {
+    align-self: end;
+    font-size: 24px; /* Size of the button */
+    font-weight: bold; /* Make the cross symbol bold */
+    background-color: transparent; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px 20px; /* Padding around the text */
+    color: black; /* Color of the cross */
+    border-radius: 5px; /* Optional: rounded corners */
+    outline: none; /* Removes outline */
+  }
+  
+  .exit:hover, .exit:focus {
+    color: red; /* Red color on hover or focus */
+    background-color: #f0f0f0; /* Light gray background on hover */
+  }
