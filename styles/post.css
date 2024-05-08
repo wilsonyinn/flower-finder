@@ -54,5 +54,28 @@ body{
     align-items: center;
     width: 30%;
     height: 80%;
-    justify-content: space-evenly;
+    justify-content: start;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
+.white-box > h1{
+    font-size: 3em;
+    margin: 0;
+    margin-top: 1em;
+}
+
+.white-box > p {
+    margin-top: 2em;
+}
+
+.white-box > input {
+    margin-top: 26em;
+}
+
+.white-box > button {
+    margin-top: 2em;
 }
