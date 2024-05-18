@@ -21,12 +21,13 @@
 
     <!-- background -->
     <div class="post-background">
-      <div class="white-box">
+      <form id="photo-upload" class="white-box">
         <h1>Upload</h1>
         <p>Share your photos and videos, and let the world love them.</p>
-        <input type="image" />
-        <button class="green-button">Submit</button>
-      </div>
+        <input type="file" id="photo" name="photo" accept="image/*" required />
+        <button class="green-button" type="submit">Submit</button>
+      </form>
     </div>
+    <script src="/js/post.js"></script>
   </body>
 </html>

@@ -7,7 +7,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     console.log(email);
     console.log(password);
     
-    fetch('/register', {
+    fetch('/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
