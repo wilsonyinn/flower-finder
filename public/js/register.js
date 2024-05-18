@@ -12,7 +12,7 @@ document.getElementById('register-form').addEventListener('submit', function(eve
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ username, password })
+        body: JSON.stringify({ firstName, lastName, email, username, password })
     })
     .then(response => response.json())
     .then(data => {
