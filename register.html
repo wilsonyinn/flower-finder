@@ -27,16 +27,18 @@
           <img src="./assets/apple logo.png" alt="" />
         </div>
 
+        <!-- START OF FORM -->
+        <form id="register-form" action="">
         <!-- first name and last name row -->
         <div class="row1">
           <div class="white-box-title">
             <h2 class="white-box-text">First name</h2>
-            <input class="half-input" type="text" />
+            <input class="half-input" id="first-name" type="text" />
           </div>
 
           <div class="white-box-title">
             <h2 class="white-box-text" >Last name</h2>
-            <input class="half-input" type="text" />
+            <input class="half-input" id="last-name" type="text" />
           </div>
         </div>
         <!-- first name and last name row -->
@@ -44,21 +46,27 @@
         <!-- email row -->
         <div class="white-box-title">
           <h2 class="white-box-text">Email</h2>
-          <input type="text" />
+          <input type="text" id="email"/>
         </div>
         <!-- email row -->
+        <div class="white-box-title">
+          <h2 class="white-box-text">Username</h2>
+          <input type="text" id="username"/>
+        </div>
 
         <!-- password row -->
         <div class="white-box-title">
           <h2 class="white-box-text">Password</h2>
-          <input type="text" />
+          <input type="text" id="password"/>
         </div>
         <!-- password row -->
 
-        <button class="green-button">Create an Account</button>
+        <button class="green-button" type="submit">Create an Account</button>
       </div>
+    </form>
       <!-- white box end -->
     </div>
     <!-- page background end -->
+    <script src="register.js"></script>
   </body>
 </html>
