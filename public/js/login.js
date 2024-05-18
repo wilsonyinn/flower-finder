@@ -3,23 +3,20 @@ document.getElementById('login-form').addEventListener('submit', function(event)
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-
-    console.log(email);
-    console.log(password);
     
-    fetch('/login', {
+    fetch('/api/users/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ username, password })
+        body: JSON.stringify({ email, password })
     })
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            alert('User registered successfully!');
+            alert('User successfully logged in!');
         } else {
-            alert('Registration failed: ' + data.message);
+            alert('Login failed: ' + data.message);
         }
     })
     .catch(error => {
