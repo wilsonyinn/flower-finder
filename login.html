@@ -30,21 +30,34 @@
 
         <p class="white-box-text">Or, sign in with your email</p>
 
-        <div class="white-box-title">
-          <h2 class="white-box-text">Email</h2>
-          <input class="white-box-text" type="text" value="name@email.com" />
-        </div>
+        <form id="login-form" action="">
+          <div class="white-box-title">
+            <h2 class="white-box-text">Email</h2>
+            <input
+              class="white-box-text"
+              id="email"
+              type="text"
+              value="name@email.com"
+            />
+          </div>
 
-        <div class="white-box-title">
-          <h2 class="white-box-text">Password</h2>
-          <input class="white-box-text" type="text" value="Password" />
-        </div>
+          <div class="white-box-title">
+            <h2 class="white-box-text">Password</h2>
+            <input
+              class="white-box-text"
+              id="password"
+              type="text"
+              value="Password"
+            />
+          </div>
 
-        <div class="white-box-title">
-          <h2 class="white-box-text">Forgot your password?</h2>
-        </div>
-        <button class="green-button">Sign in</button>
+          <div class="white-box-title">
+            <h2 class="white-box-text">Forgot your password?</h2>
+          </div>
+          <button class="green-button" type="submit">Sign in</button>
+        </form>
       </div>
     </div>
+    <script src="login.js"></script>
   </body>
 </html>
