@@ -36,4 +36,15 @@ router.post('/upload', upload.single('photo'), async (req, res) => {
   }
 });
 
+//get 12 most recent images
+router.get('/recent-images', async (req, res) => {
+  try {
+    const recentImages = await Image.find().sort({ upload_date: -1 }).limit(12);
+    res.json(recentImages);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: 'An error occurred while retrieving the images' });
+  }
+});
+
 module.exports = router;
