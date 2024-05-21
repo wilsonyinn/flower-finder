@@ -11,20 +11,21 @@ const upload = multer({ storage: storage });
 
 // Define a POST route to handle file uploads
 router.post('/upload', upload.single('photo'), async (req, res) => {
-  console.log("Made it to route!");
-  console.log("Req.file.originalname = " + req.file.originalname);
-  // console.log("Req.file.buffer = " + req.file.buffer);
-  console.log("Req.file.mimetype = " + req.file.mimetype);
   if (!req.file) {
     return res.status(400).send('No file uploaded.');
   }
 
+  const { image_title, uploader, tags } = req.body;
+
   const newImage = new Image({
-    name: req.file.originalname,
+    image_title: image_title,
+    file_name: req.file.originalname,
+    uploader: uploader,
     img: {
       data: req.file.buffer,
       contentType: req.file.mimetype
-    }
+    },
+    tags: tags ? tags.split(',') : []
   });
 
   try {
