@@ -56,8 +56,25 @@ router.get('/images/user/:uploader', async (req, res) => {
   }
 
   try {
-    const userImages = await Image.find({ uploader });
+    const userImages = await Image.find({ uploader }).sort({ upload_date: -1 }).limit(9);
     res.json(userImages);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: 'An error occurred while retrieving the images' });
+  }
+});
+
+//get images by matching tag
+router.get('/tag/:tag', async (req, res) => {
+  const { tag } = req.params;
+
+  if (!tag) {
+    return res.status(400).json({ success: false, message: 'Tag not specified' });
+  }
+
+  try {
+    const imagesWithTag = await Image.find({ tags: tag }).sort({ upload_date: -1 }).limit(12);
+    res.json(imagesWithTag);
   } catch (err) {
     console.error(err);
     res.status(500).json({ success: false, message: 'An error occurred while retrieving the images' });
