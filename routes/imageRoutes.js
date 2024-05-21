@@ -47,4 +47,21 @@ router.get('/recent-images', async (req, res) => {
   }
 });
 
+//get images uploaded by specified user
+router.get('/images/user/:uploader', async (req, res) => {
+  const { uploader } = req.params;
+
+  if (!uploader) {
+    return res.status(400).json({ success: false, message: 'Uploader not specified' });
+  }
+
+  try {
+    const userImages = await Image.find({ uploader });
+    res.json(userImages);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: 'An error occurred while retrieving the images' });
+  }
+});
+
 module.exports = router;
