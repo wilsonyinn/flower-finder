@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from "./pages/LandingPage";
+import LoginPage from "./pages/LoginPage";
+import RegistrationPage from "./pages/RegistrationPage";
+import SubmitPost from "./pages/SubmitPost";
+import ViewPost from "./pages/ViewPost";
+
 
 function App() {
-  const [backendData, setBackendData] = useState([{}]);
-
-  useEffect(() => {
-    fetch("/api")
-      .then((response) => response.json())
-      .then((data) => {
-        setBackendData(data);
-      });
-  }, []);
   return (
-    <div>
-      {typeof backendData.users === "undefined" ? (
-        <p>Loading.....</p>
-      ) : (
-        backendData.users.map((user, i) => <p key={i}> {user} </p>)
-      )}
-    </div>
+    <Router>
+      <Routes>
+        <Route path= "/" element={<LandingPage />}/>
+        <Route path= "/login" element={<LoginPage />}/>
+        <Route path= "/register" element={<RegistrationPage />}/>
+        <Route path= "/submitPost" element={<SubmitPost />}/>
+        <Route path= "/viewPost" element={<ViewPost />}/>
+      </Routes>
+    </Router>
   );
 }
 
