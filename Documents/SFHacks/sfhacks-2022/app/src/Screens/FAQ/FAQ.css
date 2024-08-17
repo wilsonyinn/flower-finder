@@ -1,0 +1,218 @@
+.faq-section {
+    position: relative;
+}
+
+.faq-banner-cont {
+    top: 18.2291vw;
+    position: absolute;
+}
+
+.faq-big-cross-cont-one {
+    position: absolute;
+    left: 30vw;
+    z-index: 5;
+    top: 17vw;
+}
+.faq-big-cross-one {
+    background: var(--red);
+    height: 10.416vw;
+    position: relative;
+    width: 1.5625vw;
+}
+.faq-big-cross-cont-one:after {
+    background: var(--red);
+    content: "";
+    height: 1.5625vw;
+    left: -4.427vw;
+    position: absolute;
+    top: 4.427vw;
+    width: 10.416vw;
+}
+
+.faq-big-cross-cont-two {
+    position: absolute;
+    right: 23vw;
+    z-index: 5;
+    bottom: -70vw;
+}
+.faq-big-cross-two {
+    background: var(--red);
+    height: 10.416vw;
+    position: relative;
+    width: 1.5625vw;
+}
+.faq-big-cross-cont-two:after {
+    background: var(--red);
+    content: "";
+    height: 1.5625vw;
+    left: -4.427vw;
+    position: absolute;
+    top: 4.427vw;
+    width: 10.416vw;
+}
+
+.faq-small-cross-cont {
+    position: absolute;
+    left: 16vw;
+    z-index: 5;
+    bottom: 19vw;
+}
+.faq-small-cross {
+    background: var(--red);
+    height: 5.2083vw;
+    position: relative;
+    width: 1.0416vw;
+}
+.faq-small-cross:after {
+    background: var(--red);
+    content: "";
+    height: 1.0416vw;
+    left: -2.0833vw;
+    position: absolute;
+    top: 2.0833vw;
+    width: 5.2083vw;
+}
+
+.faq-cont {
+    font-size: 1.29vw;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 2.2395vw;
+    padding: 7vw 0px;
+}
+
+.faq-wrapper {
+    width: 75%;
+    margin-right: -6%;
+}
+
+.faq-x {
+    font-weight: 900;
+    /* color: var(--red); */
+    height: 1.8229166666666667vw;
+}
+
+.rc-collapse {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rc-collapse-item {
+    flex: 50%;
+    position: relative;
+}
+.rc-collapse-header {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    padding: 10px 0 10px 1.0416vw;
+    border-bottom: var(--white) 2px solid;
+}
+
+.rc-collapse-header:hover {
+    background-color: var(--red);
+    color: var(--white);
+    /* transition: 0.25s ease; */
+}
+.rc-collapse-anim-active {
+    transition: height 0.2s ease-out;
+}
+
+.rc-collapse-content {
+    overflow: hidden;
+    text-align: left;
+    line-height: 1.6vw;
+    font-size: 1.1vw;
+    padding: 1.0416vw 2.6041vw 1.0416vw 30px;
+    position: absolute;
+    background-color: var(--red);
+    color: var(--white);
+    z-index: 4;
+}
+.rc-collapse-item-active {
+    background-color: var(--red);
+    color: var(--white);
+}
+.rc-collapse-content-inactive {
+    display: none;
+}
+
+#faq-link {
+    text-decoration: none !important;
+    color: var(--black) !important;
+    font-weight: 500 !important;
+}
+
+#faq-link:hover {
+    color: var(--white) !important;
+}
+
+@media only screen and (max-device-width: 450px) {
+    .faq-banner-cont {
+        top: 160px;
+    }
+
+    .faq-big-cross-cont-one {
+        top: 28vw;
+    }
+
+    .faq-big-cross-cont-two {
+        right: 9.1145vw;
+        bottom: -150vw;
+    }
+
+    .faq-small-cross-cont {
+        right: 23.958vw;
+        bottom: 78vw;
+    }
+
+    .faq-cont {
+        font-size: 3.5vw;
+        line-height: 5vw;
+    }
+    .faq-wrapper {
+        width: 90%;
+        margin-right: 0%;
+    }
+
+    .faq-x {
+        font-weight: 900;
+        /* color: var(--red); */
+        height: 15px;
+    }
+
+    .rc-collapse {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .rc-collapse-item {
+        flex: 100%;
+    }
+
+    .rc-collapse-header {
+        padding: 6px 0 4px 5vw;
+        border-bottom: var(--white) 1px solid;
+    }
+
+    .rc-collapse-anim-active {
+        transition: height 0.2s ease-out;
+    }
+
+    .rc-collapse-content {
+        font-size: 3.5vw;
+        line-height: 5vw;
+        padding: 10px 10px 10px 25px;
+    }
+    @-moz-document url-prefix() {
+        .about-head-two {
+            white-space: nowrap;
+            height: 13vw;
+        }
+        .about-head-two-line {
+            width: 50px;
+        }
+    }
+}

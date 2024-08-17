@@ -1,0 +1,132 @@
+.tracks-section {
+    position: relative;
+}
+
+.track-banner-cont {
+    top: 6.25vw;
+    position: absolute;
+}
+
+.track-big-cross-cont {
+    position: absolute;
+    right: 18vw;
+    z-index: 5;
+    top: 32vw;
+}
+.track-big-cross {
+    background: var(--red);
+    height: 10.416vw;
+    position: relative;
+    width: 1.5625vw;
+}
+.track-big-cross:after {
+    background: var(--red);
+    content: "";
+    height: 1.5625vw;
+    left: -4.427vw;
+    position: absolute;
+    top: 4.427vw;
+    width: 10.416vw;
+}
+
+.track-small-cross-cont {
+    position: absolute;
+    left: 18vw;
+    z-index: 5;
+    top: 5vw;
+}
+.track-small-cross {
+    background: var(--red);
+    height: 5.2083vw;
+    position: relative;
+    width: 1.0416vw;
+}
+.track-small-cross:after {
+    background: var(--red);
+    content: "";
+    height: 1.0416vw;
+    left: -2.083vw;
+    position: absolute;
+    top: 2.083vw;
+    width: 5.2083vw;
+}
+.tracks-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8vw 0 5vw 0;
+}
+
+.track1,
+.track2,
+.track3,
+.track4 {
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2.6041666666666665vw;
+    font-weight: 700;
+    color: var(--red);
+    margin-bottom: 4.166666666666667vw;
+    white-space: nowrap;
+}
+
+.track1 > div,
+.track2 > div,
+.track3 > div,
+.track4 > div {
+    padding-left: 3.6458333333333335vw;
+}
+
+.stroke {
+    -webkit-text-stroke: 1px var(--red);
+    color: transparent;
+    opacity: 0.6;
+}
+
+.track1 {
+    margin-right: -200px;
+}
+
+@media only screen and (max-device-width: 450px) {
+    .track-banner-cont {
+        top: 70px;
+    }
+
+    .track-big-cross-cont {
+        top: 80vw;
+        right: 15vw;
+    }
+
+    .track-small-cross-cont {
+        left: 18vw;
+        top: 18vw;
+    }
+
+    .track1,
+    .track2,
+    .track3,
+    .track4 {
+        font-size: 6vw;
+        margin-bottom: 6vw;
+    }
+
+    .tracks-cont {
+        padding: 10vw 0 4vw 0;
+    }
+    @-moz-document url-prefix() {
+        .about-head-two {
+            white-space: nowrap;
+            height: 13vw;
+        }
+        .about-head-two-line {
+            width: 50px;
+        }
+    }
+}
