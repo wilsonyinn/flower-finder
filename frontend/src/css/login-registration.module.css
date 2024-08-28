@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loginNav{
+    height: 94px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.greenButton {
+    width: 100px;
+    height: 50px;
+    background-color: #059377;
+    color: white;
+    border-color: white;
+    border-radius: 8px;
+    box-shadow: none;
+    font-size: 1em;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+.loginNav > .greenButton {
+    margin-right: 60px;
+}
+
+.loginRegisterBackground{
+    flex-grow: 2;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+                       rgba(0, 0, 0, 0.5)), url(../assets/login\ banner.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 817px;
+}
+
+.quickLoginButtons {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    justify-content: space-evenly;
+}
+
+.quickLoginButtons > img {
+    height: 50px;
+    width: 50px;
+}
+.whiteBox{
+    border-radius: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 80%;
+    justify-content: space-evenly;
+}
+
+.whiteBox > h1{
+    font-size: 40px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.whiteBoxText{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+.whiteBox > p{
+    font-size: 16;
+    font-weight: 600;
+    color: #868686;
+    margin: 0px;
+}
+
+.whiteBoxTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    width: 80%;
+}
+
+.whiteBoxTitle > h2 {
+    font-size: 24;
+    margin-bottom: .25em;
+    margin-left: 2px;
+    margin-top: 0px;
+}
+.whiteBoxTitle > input {
+    color: #7E7E7E; 
+    width: 100%;
+    height: 2rem;
+    border-radius: 6px;
+    border-color: #DFDFE0;
+    border-style: solid;
+}
+
+.whiteBoxTitle > .halfInput {
+    width: 95%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.whiteBox > button{
+    width: 80%;
+    margin-bottom: .5em;
+}
+
+.row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+}

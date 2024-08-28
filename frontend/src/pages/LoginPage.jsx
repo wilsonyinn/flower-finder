@@ -1,87 +1,57 @@
-// import React, { useState } from "react";
-// import styles from "../css/login-registration.module.css";
+import React, { useRef } from "react";
+import styles from "../css/login-registration.module.css";
+import AppleLogo from "../assets/apple logo.png";
+import GoogleLogo from "../assets/google logo.png";
+import FacebookLogo from "../assets/facebook logo.png";
 
-// const LoginPage = () => {
-//   const [email, setEmail] = useState("name@email.com");
-//   const [password, setPassword] = useState("Password");
+const LoginPage = () => {
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.loginNav}>
+        <button className={styles.greenButton}>Join</button>
+      </div>
 
-//   const handleSubmit = async (event) => {
-//     event.preventDefault();
+      <div className={styles.loginRegisterBackground}>
+        <div className={styles.whiteBox}>
+          <h1 className={styles.whiteBoxText}>Welcome back.</h1>
 
-//     try {
-//       const response = await fetch("/api/users/login", {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({ email, password }),
-//       });
+          <div className={styles.quickLoginButtons}>
+            <img src={AppleLogo} alt="" />
+            <img src={GoogleLogo} alt="" />
+            <img src={FacebookLogo} alt="" />
+          </div>
 
-//       const data = await response.json();
+          <p className={styles.whiteBoxText}>Or, sign in with your email</p>
 
-//       if (data.success) {
-//         alert("User successfully logged in!");
-//       } else {
-//         alert("Login failed: " + data.message);
-//       }
-//     } catch (error) {
-//       console.error("Error:", error);
-//       alert("An error occurred while logging in.");
-//     }
-//   };
+          <div className={styles.whiteBoxTitle}>
+            <h2 className={styles.whiteBoxText}>Email</h2>
+            <input
+              className={styles.whiteBoxText}
+              id="email"
+              type="text"
+              value="name@email.com"
+            />
+          </div>
 
-//   return (
-//     <body>
-//       <div className={styles.loginNav}>
-//         <button className={styles.greenButton}>Join</button>
-//       </div>
+          <div className={styles.whiteBoxTitle}>
+            <h2 className={styles.whiteBoxText}>Password</h2>
+            <input
+              className={styles.whiteBoxText}
+              id="password"
+              type="text"
+              value="Password"
+            />
+          </div>
 
-//       <div className={styles.loginRegisterBackground}>
-//         <div className={styles.whiteBox}>
-//           <h1 className={styles.whiteBoxText}>Welcome back.</h1>
-
-//           <div className={styles.quickLoginButtons}>
-//             <img src="/assets/apple logo.png" alt="Apple logo" />
-//             <img src="/assets/google logo.png" alt="Google logo" />
-//             <img src="/assets/facebook logo.png" alt="Facebook logo" />
-//           </div>
-
-//           <p className={styles.whiteBoxText}>Or, sign in with your email</p>
-
-//           <form id="login-form" onSubmit={handleSubmit}>
-//             <div className={styles.whiteBoxTitle}>
-//               <h2 className={styles.whiteBoxText}>Email</h2>
-//               <input
-//                 className={styles.whiteBoxText}
-//                 id="email"
-//                 type="text"
-//                 value={email}
-//                 onChange={(e) => setEmail(e.target.value)}
-//               />
-//             </div>
-
-//             <div className={styles.whiteBoxTitle}>
-//               <h2 className={styles.whiteBoxText}>Password</h2>
-//               <input
-//                 className={styles.whiteBoxText}
-//                 id="password"
-//                 type="password"
-//                 value={password}
-//                 onChange={(e) => setPassword(e.target.value)}
-//               />
-//             </div>
-
-//             <div className={styles.whiteBoxTitle}>
-//               <h2 className={styles.whiteBoxText}>Forgot your password?</h2>
-//             </div>
-//             <button className={styles.greenButton} type="submit">
-//               Sign in
-//             </button>
-//           </form>
-//         </div>
-//       </div>
-//     </body>
-//   );
-// };
-
-// export default LoginPage;
+          <div className={styles.whiteBoxTitle}>
+            <h2 className={styles.whiteBoxText}>Forgot your password?</h2>
+          </div>
+          <button className={styles.greenButton} type="submit">
+            Sign in
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default LoginPage;
