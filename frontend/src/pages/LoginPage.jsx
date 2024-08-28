@@ -5,6 +5,21 @@ import GoogleLogo from "../assets/google logo.png";
 import FacebookLogo from "../assets/facebook logo.png";
 
 const LoginPage = () => {
+
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const dummyEmail = "testuser@gmail.com";
+  const dummyPassword = "testPassword123";
+
+  function handleSubmit() {
+    if (emailRef.current.value === dummyEmail && passwordRef.current.value === dummyPassword){
+        alert("successful login");
+        //route to landing
+    } else {
+        alert("login failed");
+    }
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.loginNav}>
@@ -29,7 +44,8 @@ const LoginPage = () => {
               className={styles.whiteBoxText}
               id="email"
               type="text"
-              value="name@email.com"
+              placeholder="Email"
+              ref={emailRef}
             />
           </div>
 
@@ -38,15 +54,16 @@ const LoginPage = () => {
             <input
               className={styles.whiteBoxText}
               id="password"
-              type="text"
-              value="Password"
+              type="password"
+              placeholder="Password"
+              ref={passwordRef}
             />
           </div>
 
           <div className={styles.whiteBoxTitle}>
             <h2 className={styles.whiteBoxText}>Forgot your password?</h2>
           </div>
-          <button className={styles.greenButton} type="submit">
+          <button className={styles.greenButton} onClick={handleSubmit}>
             Sign in
           </button>
         </div>
@@ -54,4 +71,5 @@ const LoginPage = () => {
     </div>
   );
 };
+
 export default LoginPage;
