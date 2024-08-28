@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 html, body {
     height: 100%;
     margin: 0;
@@ -9,7 +11,7 @@ body{
     justify-content: flex-start;
 }
 
-.landing-banner {
+.landingBanner {
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
@@ -23,26 +25,26 @@ body{
       "slnt" 0;
 }
 
-.nav-bar {
+.navBar {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.left-nav {
+.leftNav {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-grow: 1;
 }
-.left-nav > h1 {
+.leftNav > h1 {
     margin-left: 2em;
     color: white;
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 400;
 }
 
-.right-nav {
+.rightNav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -51,16 +53,16 @@ body{
     font-size: 1em;
 }
 
-.right-nav > h2 {
+.rightNav > h2 {
     color: white;
-    font-weight: 400;
+    font-weight: 200;
 }
 
-.right-nav > .login {
+.rightNav > .login {
     margin-right: 2em;
 }
 
-.banner-text {
+.bannerText {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -68,14 +70,14 @@ body{
     align-self: center;
 }
 
-.banner-text > p {
+.bannerText > p {
     margin-top: 50px;
     color: white;
     font-size: 34px;
-    font-weight: 800;
+    font-weight: 400;
 }
 
-.input-search {
+.inputSearch {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -83,7 +85,7 @@ body{
     width: 100%;
 }
 
-.input-search > input{
+.inputSearch > input{
     width: 30%;
     height: 4em;
     font-size: 1em;
@@ -92,13 +94,13 @@ body{
     border-radius: 8px;
 }
 
-.input-search > button {
+.inputSearch > button {
     background-image: url(../assets/search-icon.webp);
     background-size: 59px;
     width: 5em;
 }
 
-.title-filter-row {
+.titleFilterRow {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -107,7 +109,7 @@ body{
     margin: 10px 0px;
 }
 
-.photo-grid {
+.photoGrid {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -118,7 +120,7 @@ body{
     margin-bottom: 30px;
 }
 
-.photo-grid > img {
+.photoGrid > img {
     flex-grow: 1;
     height: 300px;
 }

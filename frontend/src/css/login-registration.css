@@ -32,15 +32,16 @@ body{
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
-
 }
+
 .login-nav > .green-button {
     margin-right: 60px;
 }
+
 .login-register-background{
     flex-grow: 2;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-                       rgba(0, 0, 0, 0.5)), url(/assets/login\ banner.jpg);
+                       rgba(0, 0, 0, 0.5)), url(../assets/login\ banner.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
