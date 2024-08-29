@@ -2,7 +2,7 @@ import React from "react";
 import Photo from "../assets/flower-photo-1.jpg"
 import styles from "../css/view-post.module.css"
 
-const ViewPost = () => {
+const ViewPostPage = () => {
   return (
     <body>
       <div className={styles.navBar}></div>
@@ -19,4 +19,4 @@ const ViewPost = () => {
   );
 };
 
-export default ViewPost;
+export default ViewPostPage;

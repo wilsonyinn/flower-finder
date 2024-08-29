@@ -3,18 +3,21 @@ import styles from "../css/login-registration.module.css"
 import GoogleLogo from "../assets/google logo.png"
 import FacebookLogo from "../assets/facebook logo.png"
 import AppleLogo from "../assets/apple logo.png"
+import { useNavigate } from "react-router-dom"
 
 const RegistrationPage = () => {
   const emailRef = useRef();
   const usernameRef = useRef();
   const passwordRef = useRef();
 
+  const navigate = useNavigate();
+
   function handleSubmit() {
     console.log(emailRef.current.value);
     console.log(usernameRef.current.value);
     console.log(passwordRef.current.value);
     alert("registration submit");
-    //reroute to login
+    navigate("/login")
   }
   return (
     <div>

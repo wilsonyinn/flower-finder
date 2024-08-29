@@ -3,6 +3,7 @@ import styles from "../css/login-registration.module.css";
 import AppleLogo from "../assets/apple logo.png";
 import GoogleLogo from "../assets/google logo.png";
 import FacebookLogo from "../assets/facebook logo.png";
+import { useNavigate } from 'react-router-dom'
 
 const LoginPage = () => {
 
@@ -10,11 +11,13 @@ const LoginPage = () => {
   const passwordRef = useRef();
   const dummyEmail = "testuser@gmail.com";
   const dummyPassword = "testPassword123";
+  
+  const navigate = useNavigate();
 
   function handleSubmit() {
     if (emailRef.current.value === dummyEmail && passwordRef.current.value === dummyPassword){
         alert("successful login");
-        //route to landing
+        navigate("/");
     } else {
         alert("login failed");
     }

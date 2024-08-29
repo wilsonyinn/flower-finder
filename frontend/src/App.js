@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
-import SubmitPost from "./pages/SubmitPost";
-import ViewPost from "./pages/ViewPost";
-
+import SubmitPost from "./pages/SubmitPostPage";
+import ViewPost from "./pages/ViewPostPage";
 
 function App() {
   return (

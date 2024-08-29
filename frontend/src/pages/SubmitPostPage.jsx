@@ -1,17 +1,20 @@
 import React, { useRef } from "react";
 import styles from "../css/post.module.css";
+import { useNavigate } from "react-router-dom"
 
-const SubmitPost = () => {
+const SubmitPostPage = () => {
   const photoRef = useRef();
+
+  const navigate = useNavigate();
 
   function handleSubmit(){
     if (photoRef.current.value != "") {
       console.log(photoRef);
       alert("Image Submitted");
+      navigate("/")
     } else {
       alert("Submit Failed");
     }
-    //reroute to home or submit post?
   }
 
   return (
@@ -39,4 +42,4 @@ const SubmitPost = () => {
   );
 };
 
-export default SubmitPost;
+export default SubmitPostPage;
