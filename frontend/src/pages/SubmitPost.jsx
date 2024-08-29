@@ -11,6 +11,7 @@ const SubmitPost = () => {
     } else {
       alert("Submit Failed");
     }
+    //reroute to home or submit post?
   }
 
   return (
