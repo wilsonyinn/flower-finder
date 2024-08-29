@@ -1,21 +1,41 @@
-import React from 'react'
+import React, { useRef } from "react";
+import styles from "../css/post.module.css";
 
 const SubmitPost = () => {
+  const photoRef = useRef();
+
+  function handleSubmit(){
+    if (photoRef.current.value != "") {
+      console.log(photoRef);
+      alert("Image Submitted");
+    } else {
+      alert("Submit Failed");
+    }
+  }
+
   return (
-    <div>  
-    <header class="post-nav">
-      <button class="green-button">Join</button>
-    </header>
+    <div>
+      <header className={styles.postNav}>
+        <button className={styles.greenButton}>Join</button>
+      </header>
 
-    <div class="post-background">
-      <form id="photo-upload" class="white-box">
-        <h1>Upload</h1>
-        <p>Share your photos and videos, and let the world love them.</p>
-        <input type="file" id="photo" name="photo" accept="image/*" required />
-        <button class="green-button" type="submit">Submit</button>
-      </form>
-    </div></div>
-  )
-}
+      <div className={styles.postBackground}>
+        <div className={styles.whiteBox}>
+          <h1>Upload</h1>
+          <p>Share your photos and videos, and let the world love them.</p>
+          <input
+            type="file"
+            id="photo"
+            accept="image/*"
+            ref={photoRef}
+          />
+          <button className={styles.greenButton} onClick={handleSubmit}>
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default SubmitPost
+export default SubmitPost;
