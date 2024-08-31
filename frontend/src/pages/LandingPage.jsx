@@ -9,9 +9,16 @@ import flowerPhoto6 from "../assets/flower-photo-6.jpg"
 import flowerPhoto7 from "../assets/flower-photo-7.jpg"
 import flowerPhoto8 from "../assets/flower-photo-8.jpg"
 import flowerPhoto9 from "../assets/flower-photo-9.jpg"
+import { useNavigate } from "react-router-dom"
 
+const LandingPage = ({ username }) => {
+  
+  const navigate = useNavigate();
 
-const LandingPage = () => {
+  function handleReroute(route) {
+    navigate(route);
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.landingBanner}>
@@ -21,9 +28,9 @@ const LandingPage = () => {
           </div>
 
           <div className={styles.rightNav}>
-            <h2>Upload</h2>
-            <h2>FAQ</h2>
-            <h2 className={styles.login}>Log in</h2>
+            <h2>@wilson123</h2>
+            <h2 onClick={() => handleReroute("/submit")}>Upload</h2>
+            <h2 onClick={() => handleReroute("/login")}className={styles.login}>Log out</h2>
           </div>
         </div>
 

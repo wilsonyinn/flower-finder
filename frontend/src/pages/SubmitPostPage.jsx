@@ -8,7 +8,7 @@ const SubmitPostPage = () => {
   const navigate = useNavigate();
 
   function handleSubmit(){
-    if (photoRef.current.value != "") {
+    if (photoRef.current.value !== "") {
       console.log(photoRef);
       alert("Image Submitted");
       navigate("/")
