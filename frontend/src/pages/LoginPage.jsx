@@ -17,7 +17,7 @@ const LoginPage = () => {
   function handleSubmit() {
     if (emailRef.current.value === dummyEmail && passwordRef.current.value === dummyPassword){
         alert("successful login");
-        navigate("/");
+        navigate("/landing");
     } else {
         alert("login failed");
     }

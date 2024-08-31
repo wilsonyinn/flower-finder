@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "../css/landing.module.css";
 import flowerPhoto1 from "../assets/flower-photo-1.jpg"
 import flowerPhoto2 from "../assets/flower-photo-2.jpg"
@@ -11,7 +11,7 @@ import flowerPhoto8 from "../assets/flower-photo-8.jpg"
 import flowerPhoto9 from "../assets/flower-photo-9.jpg"
 import { useNavigate } from "react-router-dom"
 
-const LandingPage = ({ username }) => {
+const LandingPage = () => {
   
   const navigate = useNavigate();
 
