@@ -65,9 +65,4 @@ router.post('/login', async (req, res) => {
       }
     });
 
-router.get("/getUsername", async(req, res) => {
-    const { email } = req.body;
-    
-})
-    
 module.exports = router;

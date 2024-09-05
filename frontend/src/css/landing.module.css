@@ -12,7 +12,7 @@ html, body {
 .landingBanner {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35),
                        rgba(0, 0, 0, 0.5)), url(../assets/banner.jpg);
     background-size: 1950px;
     min-height: 400px;

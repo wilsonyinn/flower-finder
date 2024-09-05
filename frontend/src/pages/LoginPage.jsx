@@ -39,9 +39,8 @@ const LoginPage = () => {
         }
         return response.json()
       }).then((data) => {
-        console.log('Response data:', data);
         if (data.success) {
-          navigate("/landing", {state: {id: }});
+          navigate("/", {state: {isLoggedIn: true, username: "wilson123"}});
         }
       })
       .catch((error) => {
