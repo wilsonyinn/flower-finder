@@ -13,6 +13,10 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const [loginMessage, setLoginMessage] = useState("");
 
+  function handleClick() {
+    navigate("/register");
+  }
+
   function handleLogin() {
 
     const url = 'http://localhost:5000/api/users/login';
@@ -29,18 +33,16 @@ const LoginPage = () => {
       },
       body: JSON.stringify(userInfo), 
     })
-      .then((response) => {
+      .then(async (response) => {
         if (!response.ok) {
           console.log(response)
-          return response.json().then((errorData) => {
-            throw new Error(JSON.stringify(errorData));
-          })
-          throw new Error(response);
+          const errorData = await response.json();
+          throw new Error(JSON.stringify(errorData));
         }
         return response.json()
       }).then((data) => {
         if (data.success) {
-          navigate("/", {state: {isLoggedIn: true, username: "wilson123"}});
+          navigate("/", {state: {isLoggedIn: true, username: data.username}});
         }
       })
       .catch((error) => {
@@ -52,7 +54,7 @@ const LoginPage = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.loginNav}>
-        <button className={styles.greenButton}>Join</button>
+        <button onClick={handleClick} className={styles.greenButton}>Register</button>
       </div>
 
       <div className={styles.loginRegisterBackground}>

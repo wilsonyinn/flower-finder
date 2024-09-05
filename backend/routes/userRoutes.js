@@ -5,7 +5,7 @@ const User = require('../models/userModel');
 // User registration endpoint
 router.post('/register', async (req, res) => {
     const { email, username, password } = req.body;
-
+    console.log(email, username, password);
     // Simple validation
     if (!username || !password || !email)
     {
@@ -26,7 +26,7 @@ router.post('/register', async (req, res) => {
     }
 
     // Save the user
-    const newUser = new User({ firstName, lastName, email, username, password });
+    const newUser = new User({ email, username, password });
     await newUser.save();
     res.json({ success: true, message: 'User registered successfully' });
     } catch (err) {
@@ -37,8 +37,6 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
-    console.log(email);
-    console.log(password);
 
     // Simple validation
     if (!password || !email)
@@ -58,7 +56,7 @@ router.post('/login', async (req, res) => {
           return res.status(400).json({ success: false, message: 'Invalid email or password' });
         }
     
-        res.json({ success: true, message: 'Login successful' });
+        res.json({ success: true, message: 'Login successful', username: user.username });
       } catch (err) {
         console.error(err);
         res.status(500).json({ success: false, message: 'An error occurred while logging in' });

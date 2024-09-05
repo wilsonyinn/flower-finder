@@ -13,11 +13,39 @@ const RegistrationPage = () => {
   const navigate = useNavigate();
 
   function handleSubmit() {
-    console.log(emailRef.current.value);
-    console.log(usernameRef.current.value);
-    console.log(passwordRef.current.value);
-    alert("registration submit");
-    navigate("/login")
+    const url = 'http://localhost:5000/api/users/register';
+
+    const userInfo = {
+      email: emailRef.current.value,
+      username: usernameRef.current.value,
+      password: passwordRef.current.value,
+    };
+
+    console.log(userInfo);
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userInfo),
+    })
+    .then(async (response) => {
+      if (!response.ok) {
+        console.log(response)
+        const errorData = await response.json();
+        throw new Error(JSON.stringify(errorData));
+      }
+      return response.json()
+    }).then((data) => {
+      if (data.success) {
+        alert("registration success");
+        navigate("/login");
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', JSON.parse(error.message));
+    });
   }
   return (
     <div>
