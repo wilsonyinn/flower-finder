@@ -11,7 +11,7 @@ import flowerPhoto8 from "../assets/flower-photo-8.jpg"
 import flowerPhoto9 from "../assets/flower-photo-9.jpg"
 import { useNavigate } from "react-router-dom"
 
-const LandingPage = () => {
+const LandingPage = ({ isLoggedIn, username }) => {
   
   const navigate = useNavigate();
 

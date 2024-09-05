@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "../css/login-registration.module.css";
 import AppleLogo from "../assets/apple logo.png";
 import GoogleLogo from "../assets/google logo.png";
@@ -9,18 +9,45 @@ const LoginPage = () => {
 
   const emailRef = useRef();
   const passwordRef = useRef();
-  const dummyEmail = "testuser@gmail.com";
-  const dummyPassword = "testPassword123";
   
   const navigate = useNavigate();
+  const [loginMessage, setLoginMessage] = useState("");
 
-  function handleSubmit() {
-    if (emailRef.current.value === dummyEmail && passwordRef.current.value === dummyPassword){
-        alert("successful login");
-        navigate("/landing");
-    } else {
-        alert("login failed");
-    }
+  function handleLogin() {
+
+    const url = 'http://localhost:5000/api/users/login';
+
+    const userInfo = {
+      email: emailRef.current.value,
+      password: passwordRef.current.value,
+    };
+
+    fetch(url, {
+      method: 'POST', 
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userInfo), 
+    })
+      .then((response) => {
+        if (!response.ok) {
+          console.log(response)
+          return response.json().then((errorData) => {
+            throw new Error(JSON.stringify(errorData));
+          })
+          throw new Error(response);
+        }
+        return response.json()
+      }).then((data) => {
+        console.log('Response data:', data);
+        if (data.success) {
+          navigate("/landing", {state: {id: }});
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', JSON.parse(error.message));
+        setLoginMessage(JSON.parse(error.message).message);
+      });
   }
 
   return (
@@ -66,7 +93,8 @@ const LoginPage = () => {
           <div className={styles.whiteBoxTitle}>
             <h2 className={styles.whiteBoxText}>Forgot your password?</h2>
           </div>
-          <button className={styles.greenButton} onClick={handleSubmit}>
+          <p>{loginMessage}</p>
+          <button className={styles.greenButton} onClick={handleLogin}>
             Sign in
           </button>
         </div>

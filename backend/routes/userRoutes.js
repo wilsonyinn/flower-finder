@@ -4,10 +4,10 @@ const User = require('../models/userModel');
 
 // User registration endpoint
 router.post('/register', async (req, res) => {
-    const { firstName, lastName, email, username, password } = req.body;
+    const { email, username, password } = req.body;
 
     // Simple validation
-    if (!username || !password || !firstName || !lastName || !email)
+    if (!username || !password || !email)
     {
         return res.status(400).json({ success: false, message: 'All fields are required' });
     }
@@ -37,6 +37,8 @@ router.post('/register', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
+    console.log(email);
+    console.log(password);
 
     // Simple validation
     if (!password || !email)
@@ -62,5 +64,10 @@ router.post('/login', async (req, res) => {
         res.status(500).json({ success: false, message: 'An error occurred while logging in' });
       }
     });
+
+router.get("/getUsername", async(req, res) => {
+    const { email } = req.body;
+    
+})
     
 module.exports = router;
