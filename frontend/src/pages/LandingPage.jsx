@@ -1,14 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styles from "../css/landing.module.css";
-import flowerPhoto1 from "../assets/flower-photo-1.jpg"
-import flowerPhoto2 from "../assets/flower-photo-2.jpg"
-import flowerPhoto3 from "../assets/flower-photo-3.jpg"
-import flowerPhoto4 from "../assets/flower-photo-4.jpg"
-import flowerPhoto5 from "../assets/flower-photo-5.jpg"
-import flowerPhoto6 from "../assets/flower-photo-6.jpg"
-import flowerPhoto7 from "../assets/flower-photo-7.jpg"
-import flowerPhoto8 from "../assets/flower-photo-8.jpg"
-import flowerPhoto9 from "../assets/flower-photo-9.jpg"
 import { useNavigate, useLocation } from "react-router-dom"
 
 const LandingPage = () => {
@@ -17,6 +8,7 @@ const LandingPage = () => {
   const location = useLocation();
   const [username, setUsername] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [imageData, setImageData] = useState([])
   
   useEffect(() => {
     if (!location.state){
@@ -25,6 +17,24 @@ const LandingPage = () => {
       setIsLoggedIn(location.state.isLoggedIn);
       setUsername(location.state.username);
     }
+  }, [location.state, navigate])
+
+  useEffect(() => {
+    const url = 'http://localhost:5000/api/uploads/recent-images';
+    fetch(url, {method: 'GET'})
+    .then((response) => {
+      if (!response.ok) {
+        console.log(response)
+        const errorData = response.json();
+        throw new Error(JSON.stringify(errorData));
+      }
+      return response.json()
+    }).then((data) => {
+      setImageData(data);
+    })
+    .catch((error) => {
+      console.error('Error:', JSON.parse(error.message));
+    });
   }, [])
 
   function handleReroute(route) {
@@ -66,15 +76,12 @@ const LandingPage = () => {
         </div>
   
         <div className={styles.photoGrid}>
-          <img src={flowerPhoto1} alt="" />
-          <img src={flowerPhoto2} alt="" />
-          <img src={flowerPhoto3} alt="" />
-          <img src={flowerPhoto4} alt="" />
-          <img src={flowerPhoto5} alt="" />
-          <img src={flowerPhoto6} alt="" />
-          <img src={flowerPhoto7} alt="" />
-          <img src={flowerPhoto8} alt="" />
-          <img src={flowerPhoto9} alt="" />
+          {imageData.map((singleData) => {
+            const base64String = btoa(new Uint8Array(singleData.img.data.data).reduce(function (data, byte) {
+              return data + String.fromCharCode(byte);
+          }, ''));
+            return <img src={`data:image/png;base64,${base64String}`} alt="" />
+          })}
         </div>
   
         <div className={styles.footer}>

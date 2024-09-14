@@ -33,10 +33,10 @@ const LoginPage = () => {
       },
       body: JSON.stringify(userInfo), 
     })
-      .then(async (response) => {
+      .then((response) => {
         if (!response.ok) {
           console.log(response)
-          const errorData = await response.json();
+          const errorData = response.json();
           throw new Error(JSON.stringify(errorData));
         }
         return response.json()
