@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="92bd0559-5717-486c-9b0f-c56ef2d5c88a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/apple logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/facebook logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/flower-photo-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/flower-photo-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/flower-photo-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/flower-photo-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/flower-photo-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/flower-photo-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/flower-photo-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/flower-photo-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/flower-photo-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/google logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/login banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/search icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/search-icon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/assets/user icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/css/landing-page.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/css/landing-page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/css/login-registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/css/login-registration.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/LandingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/LandingPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/LoginPage.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2lHQYDm4O1U7pRnInx7Xb9ljfY5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/wilso/Documents/flower-finder/flower-finder/backend"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92bd0559-5717-486c-9b0f-c56ef2d5c88a" name="Changes" comment="" />
+      <created>1724834567786</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724834567786</updated>
+    </task>
+    <servers />
+  </component>
+</project>
